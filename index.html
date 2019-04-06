@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Hammer Spoon </title>
+  <link rel="stylesheet" type="text/css" href="build/build.css">
+
+</head>
+
+<body>
+  <article class="deck">
+
+    <section>
+      <h1><span class="emphasis">automation</span> with HammerSpoon</h1>
+    </section>
+
+    <section>
+      <h1><span class="emphasis">problem</span> 1</h1>
+      <p>laptop on full volume</p>
+    </section>
+
+    <section>
+      <h1><span class="emphasis">problem</span> 2</h1>
+      <p>window management</p>
+    </section>
+
+    <section>
+      <h1><span class="emphasis">problem</span> 3</h1>
+      <p>clipboard history</p>
+    </section>
+
+    <section>
+      <h1><span class="emphasis">problem</span> 4</h1>
+      <p>caffine</p>
+    </section>
+
+    <section>
+      <h1><span class="emphasis">problem</span> n</h1>
+      <p>add your problem </p>
+    </section>
+
+
+    <section>
+      <h1>What is Hammerspoon</h1>
+
+      <ul class="build build-items">
+        <span>A OS X automation tool which let's you control OS features using scripts written in lua.</span>
+        <ul class="build build-items">
+          <li style="margin-right:80px"> It exposes Mac OS API's in a progamming language.</li>
+          <li style="margin-right:80px"> It's code, you can save it to VCS and reuse.</li>
+          <li style="margin-right:80px"> You can install spoons.</li>
+        </ul>
+      </ul>
+    </section>
+
+    <section>
+      <h1>how it helped</h1>
+      <ul class="build build-items">
+        <span>I wrote some scripts</span>
+        <ul class="build build-items">
+          <li style="margin-right:80px"> control volumes on your wifi change </li>
+          <li style="margin-right:80px"> defining shortcuts </li>
+          <li style="margin-right:80px"> installing interesting spoons </li>
+        </ul>
+      </ul>
+     </section>
+     
+    <section>
+      <h1>Window Management</h1>
+        <pre><code class="language-lua">
+        hs.hotkey.bind({"cmd", "alt", "ctrl"}, "M", function()
+          local win = hs.window.focusedWindow()
+          local f = win:frame()
+          local screen = win:screen()
+          local max = screen:frame()
+
+          f.x = max.x
+          f.y = max.y
+          f.w = max.w
+          f.h = max.h
+          win:setFrame(f)
+        end)</code></pre>
+
+    </section>
+
+    <section>
+        <h1><span class="emphasis">demo</span> time </h1>
+    </section>
+
+    <section>
+        <h1>Spoons </h1>
+        <p>Spoons are pre-made plugins for Hammerspoon.</p>
+         <ul class="build build-items">
+        <li style="margin-right:80px"> caffine</li>
+        <li style="margin-right:80px"> clipboard history</li>
+      </ul>
+    </section>
+
+    <section>
+        <h1>Keep automating</h1>
+    </section>
+
+    <section>
+      <img width="80px" height="70px" src="images/happy-emoji.jpg"></img>
+      <h1>Thank You!</h1>
+    </section>
+  </article>
+
+  <script src="build/build.js"></script>
+
+</body>
+
+</html>
